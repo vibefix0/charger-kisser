@@ -17,6 +17,12 @@
       "name": "Chiken",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/chiken_a4g8q.mp3"
+    },
+    {
+      "id": "4",
+      "name": "Aayein",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/aayein_beyb4.mp3"
     }
   ]
 }
