@@ -528,7 +528,7 @@
     const { owner, repo, branch, token } = getGhConfig();
     const headers = { Accept: 'application/vnd.github+json' };
     if (token) headers.Authorization = 'token ' + token;
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, { headers });
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`, { headers, cache: 'no-store' });
     if (res.status === 404) return null;
     if (!res.ok) throw new Error('GitHub GET failed (' + res.status + ')');
     return res.json();
@@ -628,19 +628,31 @@
 
       setStatus('addStatus', 'File uploaded. Updating sounds list...', false);
 
-      const fileData = await ghGetFile('sounds/sounds.json');
-      let soundsObj = { sounds: [] };
-      let sha = null;
-      if (fileData){
-        soundsObj = JSON.parse(b64DecodeUnicode(fileData.content));
-        sha = fileData.sha;
-      }
-      const maxId = soundsObj.sounds.reduce((m, s) => Math.max(m, parseInt(s.id) || 0), 0);
-      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/sounds/${fileName}`;
-      soundsObj.sounds.push({ id: String(maxId + 1), name, category, url: rawUrl });
+      let success = false;
+      let lastErr = null;
+      for (let attempt = 0; attempt < 3 && !success; attempt++){
+        try{
+          const fileData = await ghGetFile('sounds/sounds.json');
+          let soundsObj = { sounds: [] };
+          let sha = null;
+          if (fileData){
+            soundsObj = JSON.parse(b64DecodeUnicode(fileData.content));
+            sha = fileData.sha;
+          }
+          const maxId = soundsObj.sounds.reduce((m, s) => Math.max(m, parseInt(s.id) || 0), 0);
+          const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/sounds/${fileName}`;
+          soundsObj.sounds.push({ id: String(maxId + 1), name, category, url: rawUrl });
 
-      const newContentB64 = b64EncodeUnicode(JSON.stringify(soundsObj, null, 2));
-      await ghPutFile('sounds/sounds.json', newContentB64, 'Add sound entry: ' + name, sha);
+          const newContentB64 = b64EncodeUnicode(JSON.stringify(soundsObj, null, 2));
+          await ghPutFile('sounds/sounds.json', newContentB64, 'Add sound entry: ' + name, sha);
+          success = true;
+        } catch(e){
+          lastErr = e;
+          if (!String(e.message).includes('409')) break;
+          await new Promise(r => setTimeout(r, 600));
+        }
+      }
+      if (!success) throw lastErr;
 
       setStatus('addStatus', '✅ "' + name + '" add ho gaya!', false, true);
       document.getElementById('addSoundForm').reset();
@@ -652,29 +664,43 @@
 
   async function deleteSound(id){
     if (!confirm('Pakka delete karna hai ye sound?')) return;
-    try{
-      const fileData = await ghGetFile('sounds/sounds.json');
-      if (!fileData) throw new Error('sounds.json nahi mili');
-      const soundsObj = JSON.parse(b64DecodeUnicode(fileData.content));
-      const target = soundsObj.sounds.find(s => s.id === id);
-      soundsObj.sounds = soundsObj.sounds.filter(s => s.id !== id);
+    let target = null;
+    let success = false;
+    let lastErr = null;
 
-      const newContentB64 = b64EncodeUnicode(JSON.stringify(soundsObj, null, 2));
-      await ghPutFile('sounds/sounds.json', newContentB64, 'Remove sound: ' + (target ? target.name : id), fileData.sha);
+    for (let attempt = 0; attempt < 3 && !success; attempt++){
+      try{
+        const fileData = await ghGetFile('sounds/sounds.json');
+        if (!fileData) throw new Error('sounds.json nahi mili');
+        const soundsObj = JSON.parse(b64DecodeUnicode(fileData.content));
+        target = soundsObj.sounds.find(s => s.id === id);
+        soundsObj.sounds = soundsObj.sounds.filter(s => s.id !== id);
 
-      if (target && target.url){
-        const parts = target.url.split('/sounds/');
-        if (parts[1]){
-          try{
-            const mp3Data = await ghGetFile('sounds/' + parts[1]);
-            if (mp3Data) await ghDeleteFile('sounds/' + parts[1], 'Remove file: ' + parts[1], mp3Data.sha);
-          } catch(_){}
-        }
+        const newContentB64 = b64EncodeUnicode(JSON.stringify(soundsObj, null, 2));
+        await ghPutFile('sounds/sounds.json', newContentB64, 'Remove sound: ' + (target ? target.name : id), fileData.sha);
+        success = true;
+      } catch(e){
+        lastErr = e;
+        if (!String(e.message).includes('409')) break;
+        await new Promise(r => setTimeout(r, 600));
       }
-      loadSoundsList();
-    } catch(e){
-      alert('Delete fail hua: ' + e.message);
     }
+
+    if (!success){
+      alert('Delete fail hua: ' + (lastErr ? lastErr.message : 'unknown error'));
+      return;
+    }
+
+    if (target && target.url){
+      const parts = target.url.split('/sounds/');
+      if (parts[1]){
+        try{
+          const mp3Data = await ghGetFile('sounds/' + parts[1]);
+          if (mp3Data) await ghDeleteFile('sounds/' + parts[1], 'Remove file: ' + parts[1], mp3Data.sha);
+        } catch(_){}
+      }
+    }
+    loadSoundsList();
   }
 
   // ---------------- ANALYTICS ----------------
