@@ -608,8 +608,14 @@
     return div.innerHTML;
   }
 
+  let soundsOpInProgress = false;
+
   document.getElementById('addSoundForm').addEventListener('submit', async function(e){
     e.preventDefault();
+    if (soundsOpInProgress){
+      setStatus('addStatus', 'Pehla upload abhi chal raha hai, wait karo...', true);
+      return;
+    }
     const name = document.getElementById('soundName').value.trim();
     const category = document.getElementById('soundCategory').value;
     const file = document.getElementById('soundFile').files[0];
@@ -617,6 +623,12 @@
 
     if (!file) return setStatus('addStatus', 'MP3 file chuno', true);
     if (file.size > 1000000) return setStatus('addStatus', 'File 1MB se badi hai, chhota clip use karo', true);
+
+    const submitBtn = document.querySelector('#addSoundForm button[type="submit"]');
+    soundsOpInProgress = true;
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.6';
+    submitBtn.textContent = 'Uploading...';
 
     try{
       setStatus('addStatus', 'Uploading mp3 file...', false);
@@ -630,7 +642,7 @@
 
       let success = false;
       let lastErr = null;
-      for (let attempt = 0; attempt < 3 && !success; attempt++){
+      for (let attempt = 0; attempt < 4 && !success; attempt++){
         try{
           const fileData = await ghGetFile('sounds/sounds.json');
           let soundsObj = { sounds: [] };
@@ -649,7 +661,7 @@
         } catch(e){
           lastErr = e;
           if (!String(e.message).includes('409')) break;
-          await new Promise(r => setTimeout(r, 600));
+          await new Promise(r => setTimeout(r, 500 + Math.random() * 500));
         }
       }
       if (!success) throw lastErr;
@@ -659,11 +671,21 @@
       loadSoundsList();
     } catch(err){
       setStatus('addStatus', '❌ ' + err.message, true);
+    } finally {
+      soundsOpInProgress = false;
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+      submitBtn.textContent = 'Upload & Add Sound';
     }
   });
 
   async function deleteSound(id){
+    if (soundsOpInProgress){
+      alert('Pehla operation abhi chal raha hai, wait karo...');
+      return;
+    }
     if (!confirm('Pakka delete karna hai ye sound?')) return;
+    soundsOpInProgress = true;
     let target = null;
     let success = false;
     let lastErr = null;
@@ -688,6 +710,7 @@
 
     if (!success){
       alert('Delete fail hua: ' + (lastErr ? lastErr.message : 'unknown error'));
+      soundsOpInProgress = false;
       return;
     }
 
@@ -700,6 +723,7 @@
         } catch(_){}
       }
     }
+    soundsOpInProgress = false;
     loadSoundsList();
   }
 
