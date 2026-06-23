@@ -1,3 +1,10 @@
 {
-  "sounds": []
+  "sounds": [
+    {
+      "id": "1",
+      "name": "Are baap re",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/are_baap_re_9yto8.mp3"
+    }
+  ]
 }
