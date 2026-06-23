@@ -35,6 +35,12 @@
       "name": "Chicken",
       "category": "disconnect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/chicken_bhsuw.mp3"
+    },
+    {
+      "id": "7",
+      "name": "Charger connected",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/charger_connected_c4bo0.mp3"
     }
   ]
 }
