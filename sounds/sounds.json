@@ -5,6 +5,12 @@
       "name": "Are baap re",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/are_baap_re_9yto8.mp3"
+    },
+    {
+      "id": "2",
+      "name": "Aayein",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/aayein_a31fl.mp3"
     }
   ]
 }
