@@ -23,6 +23,12 @@
       "name": "Aayein",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/aayein_beyb4.mp3"
+    },
+    {
+      "id": "5",
+      "name": "Are baap re",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/are_baap_re_bgay2.mp3"
     }
   ]
 }
