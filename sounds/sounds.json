@@ -41,6 +41,12 @@
       "name": "Charger connected",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/charger_connected_c4bo0.mp3"
+    },
+    {
+      "id": "8",
+      "name": "Charger disconnected",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/charger_disconnected_c4yhs.mp3"
     }
   ]
 }
