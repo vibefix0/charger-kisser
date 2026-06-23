@@ -1,12 +1,6 @@
 {
   "sounds": [
     {
-      "id": "1",
-      "name": "Vine Boom",
-      "category": "connect",
-      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/are-baap-re-yaad-aya.mp3"
-    },
-    {
       "id": "2",
       "name": "Sad Violin",
       "category": "disconnect",
