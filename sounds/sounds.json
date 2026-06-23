@@ -29,6 +29,12 @@
       "name": "Are baap re",
       "category": "disconnect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/are_baap_re_bgay2.mp3"
+    },
+    {
+      "id": "6",
+      "name": "Chicken",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/chicken_bhsuw.mp3"
     }
   ]
 }
