@@ -137,6 +137,12 @@
       "name": "tuco get out",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tuco_get_out_bfr94.mp3"
+    },
+    {
+      "id": "24",
+      "name": "ding",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ding_bga99.mp3"
     }
   ]
 }
