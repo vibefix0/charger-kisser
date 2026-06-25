@@ -107,6 +107,12 @@
       "name": "tum dum tedau",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tum_dum_tedau_bbrnx.mp3"
+    },
+    {
+      "id": "19",
+      "name": "boom",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/boom_bcp0t.mp3"
     }
   ]
 }
