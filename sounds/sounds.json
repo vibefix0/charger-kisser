@@ -119,6 +119,12 @@
       "name": "rizz",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/rizz_bdtoe.mp3"
+    },
+    {
+      "id": "21",
+      "name": "spongebob",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/spongebob_behu2.mp3"
     }
   ]
 }
