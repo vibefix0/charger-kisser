@@ -173,6 +173,12 @@
       "name": "mac quack",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/mac_quack_bkule.mp3"
+    },
+    {
+      "id": "30",
+      "name": "accha ji aisa hai kya",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/accha_ji_aisa_hai_kya_blht9.mp3"
     }
   ]
 }
