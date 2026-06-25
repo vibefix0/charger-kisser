@@ -143,6 +143,12 @@
       "name": "ding",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ding_bga99.mp3"
+    },
+    {
+      "id": "25",
+      "name": "abe saale",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/abe_saale_bhe6s.mp3"
     }
   ]
 }
