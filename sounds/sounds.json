@@ -179,6 +179,12 @@
       "name": "accha ji aisa hai kya",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/accha_ji_aisa_hai_kya_blht9.mp3"
+    },
+    {
+      "id": "31",
+      "name": "ack",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ack_bosbl.mp3"
     }
   ]
 }
