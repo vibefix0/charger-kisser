@@ -186,5 +186,11 @@
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ack_bosbl.mp3"
     }
+    {
+      "id": "32",
+      "name": "error",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/error_av622.mp3"
+    },
   ]
 }
