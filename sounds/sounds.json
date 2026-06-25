@@ -191,6 +191,138 @@
       "name": "error",
       "category": "disconnect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/error_av622.mp3"
+    },
+  {
+      "id": "33",
+      "name": "bone crack",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/bone_crack_avzly.mp3"
+    },
+    {
+      "id": "34",
+      "name": "faaah",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/faaah_azto9.mp3"
+    },
+    {
+      "id": "35",
+      "name": "ab tu gaya beta",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ab_tu_gaya_beta_b0iel.mp3"
+    },
+    {
+      "id": "36",
+      "name": "duck toy",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/duck_toy_b1j44.mp3"
+    },
+    {
+      "id": "37",
+      "name": "chalo",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/chalo_b83gc.mp3"
+    },
+    {
+      "id": "38",
+      "name": "matlab vo alag hi level ka banda tha",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/matlab_vo_alag_hi_level_ka_banda_tha_b8yq6.mp3"
+    },
+    {
+      "id": "39",
+      "name": "anime ahh",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/anime_ahh_b9kdq.mp3"
+    },
+    {
+      "id": "40",
+      "name": "punch",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/punch_baafd.mp3"
+    },
+    {
+      "id": "41",
+      "name": "tum dum tedau",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tum_dum_tedau_bbrnx.mp3"
+    },
+    {
+      "id": "42",
+      "name": "boom",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/boom_bcp0t.mp3"
+    },
+    {
+      "id": "43",
+      "name": "rizz",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/rizz_bdtoe.mp3"
+    },
+    {
+      "id": "44",
+      "name": "spongebob",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/spongebob_behu2.mp3"
+    },
+    {
+      "id": "45",
+      "name": "shocked",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/shocked_bf3wo.mp3"
+    },
+    {
+      "id": "46",
+      "name": "tuco get out",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tuco_get_out_bfr94.mp3"
+    },
+    {
+      "id": "47",
+      "name": "ding",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ding_bga99.mp3"
+    },
+    {
+      "id": "48",
+      "name": "abe saale",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/abe_saale_bhe6s.mp3"
+    },
+    {
+      "id": "49",
+      "name": "yooooooooooo",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/yooooooooooo_bhxai.mp3"
+    },
+    {
+      "id": "50",
+      "name": "tehelka omelette",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tehelka_omelette_bj3vj.mp3"
+    },
+    {
+      "id": "51",
+      "name": "tata good bye gaya",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tata_good_bye_gaya_bk69y.mp3"
+    },
+    {
+      "id": "52",
+      "name": "mac quack",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/mac_quack_bkule.mp3"
+    },
+    {
+      "id": "53",
+      "name": "accha ji aisa hai kya",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/accha_ji_aisa_hai_kya_blht9.mp3"
+    },
+    {
+      "id": "53",
+      "name": "ack",
+      "category": "disconnect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/ack_bosbl.mp3"
     }
   ]
 }
