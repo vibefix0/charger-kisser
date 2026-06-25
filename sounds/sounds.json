@@ -59,6 +59,12 @@
       "name": "bone crack",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/bone_crack_avzly.mp3"
+    },
+    {
+      "id": "11",
+      "name": "faaah",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/faaah_azto9.mp3"
     }
   ]
 }
