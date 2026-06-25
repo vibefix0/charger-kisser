@@ -95,6 +95,12 @@
       "name": "anime ahh",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/anime_ahh_b9kdq.mp3"
+    },
+    {
+      "id": "17",
+      "name": "punch",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/punch_baafd.mp3"
     }
   ]
 }
