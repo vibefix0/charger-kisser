@@ -113,6 +113,12 @@
       "name": "boom",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/boom_bcp0t.mp3"
+    },
+    {
+      "id": "20",
+      "name": "rizz",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/rizz_bdtoe.mp3"
     }
   ]
 }
