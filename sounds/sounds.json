@@ -77,6 +77,12 @@
       "name": "duck toy",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/duck_toy_b1j44.mp3"
+    },
+    {
+      "id": "14",
+      "name": "chalo",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/chalo_b83gc.mp3"
     }
   ]
 }
