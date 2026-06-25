@@ -101,6 +101,12 @@
       "name": "punch",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/punch_baafd.mp3"
+    },
+    {
+      "id": "18",
+      "name": "tum dum tedau",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/tum_dum_tedau_bbrnx.mp3"
     }
   ]
 }
