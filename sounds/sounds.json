@@ -53,6 +53,12 @@
       "name": "error",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/error_av622.mp3"
+    },
+    {
+      "id": "10",
+      "name": "bone crack",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/bone_crack_avzly.mp3"
     }
   ]
 }
