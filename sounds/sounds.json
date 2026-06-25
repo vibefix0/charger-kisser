@@ -125,6 +125,12 @@
       "name": "spongebob",
       "category": "connect",
       "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/spongebob_behu2.mp3"
+    },
+    {
+      "id": "22",
+      "name": "shocked",
+      "category": "connect",
+      "url": "https://raw.githubusercontent.com/vibefix0/charger-kisser/main/sounds/shocked_bf3wo.mp3"
     }
   ]
 }
